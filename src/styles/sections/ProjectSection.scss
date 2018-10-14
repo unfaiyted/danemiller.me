@@ -1,0 +1,93 @@
+@import "../Section";
+
+
+.projects {
+  color: #fff;
+  background-color: #000;
+  position: relative;
+  z-index:2;
+  overflow: hidden;
+
+  .bgImg {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    z-index: -1;
+    position: absolute;
+    filter: opacity(0.5) brightness(0.9) grayscale(0.3);
+  }
+
+
+ .project {
+   height: 100vh;
+   width: calc(100vw - 160px);
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding: 75px;
+
+
+   h3 {
+     font-size: 56px;
+     margin-bottom:0;
+   }
+
+   p {
+     margin-top: 0;
+    font-size: 30px;
+     position: relative;
+     margin-bottom: 40px;
+
+     &:after {
+       content: '';
+       position: absolute;
+       bottom:-10px;
+       left: 0;
+       width: 100px;
+       border-bottom: 3px double #FE0000;
+
+     }
+
+   }
+
+   a {
+
+     font-family: 'Righteous', cursive;
+     background-color: transparent;
+     border: 1px solid #fff;
+     font-size: 3vh;
+     color: #fff;
+     text-decoration: none;
+     padding: 10px 12px;
+     border-radius: 7px;
+     transition: background-color 0.33s;
+
+     &:hover {
+       background-color: #980B07;
+       transition: background-color 0.33s;
+     }
+
+   }
+ }
+
+
+  button {
+    position: absolute;
+    background-color: #980B07;
+    color: #fff;
+    border: none;
+    top:50%;
+    padding: 15px 10px;
+  }
+
+  button:first-of-type {
+    left:0;
+  }
+
+  button:last-of-type {
+   right:0;
+  }
+
+}
