@@ -1,3 +1,4 @@
+@import "../modules/globals";
 @import "../Section";
 
 
@@ -33,17 +34,38 @@
    min-height: 100vh;
    max-height: 100vh;
 
+   @include viewports(up-to small) {
+     padding: 40px 5px;
+     width: 100%;
+     justify-content: space-evenly;
+   }
+
+   @include viewports(up-to medium) {
+      flex-direction: column;
+      justify-content: flex-start;
+   }
 
    h3 {
      font-size: 56px;
      margin-bottom:0;
+
+     @include viewports(up-to small) {
+        font-size: 46px;
+       text-align: center;
+     }
+
    }
+
 
    p {
      margin-top: 0;
     font-size: 30px;
      position: relative;
      margin-bottom: 40px;
+
+     @include viewports(up-to small) {
+       font-size: 24px;
+     }
 
      &:after {
        content: '';

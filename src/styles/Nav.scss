@@ -1,5 +1,6 @@
 @import "./modules/globals";
 
+
 .nav {
   width: calc(100vw - 34px);
   position: absolute;
@@ -14,6 +15,11 @@
   left:0;
   transition: height 0.3s;
   z-index: 20;
+
+  @include viewports(up-to small) {
+    width: calc(100vw - 20px);
+  }
+
   &.sticky {
     background: #1C1C1E;
     height: 50px;
@@ -54,6 +60,10 @@
     position: relative;
     vertical-align: center;
     margin-right: 10px;
+
+    @include viewports(up-to medium) {
+      display: none;
+    }
 
 
     &.active {
@@ -96,6 +106,11 @@
 
         transform: scale(1.0);
         transition: transform 0.5s;
+
+
+        @include viewports(medium) {
+          display: inline-block;
+        }
 
         &:hover {
           animation: pulse 3s infinite;

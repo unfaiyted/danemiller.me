@@ -7,7 +7,6 @@ const sections = [
   'home','services','process','work','contact'
 ];
 
-
 class Nav extends Component {
 
   componentWillMount() {

@@ -1,3 +1,4 @@
+@import "./modules/globals";
 
 .laptop-container {
   position: relative;
@@ -6,6 +7,10 @@
   top:0;
   left:0;
 
+  @include viewports(up-to small) {
+    width: 90%;
+    height: 37%;
+  }
 
     .device {
       background: url("../images/macbook.png");
@@ -20,12 +25,17 @@
       padding-top: 53px;
       overflow: hidden;
 
+
+      @include viewports(up-to small) {
+        padding-top: 43px;
+      }
+
     }
 
     .screen {
       position: relative;
       height: 83.1%;
-      margin-right: 117px;
+      margin-right: 13.7%;
       margin-left: 13%;
       overflow: hidden;
     }
@@ -35,6 +45,9 @@
       z-index: 3;
       height: 100%;
       width: 100%;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
     }
 
   }

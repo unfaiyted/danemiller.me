@@ -1,3 +1,4 @@
+@import "../modules/globals";
 @import "../Section";
 
 
@@ -25,6 +26,7 @@
   p {
     font-size: 24px;
     text-align: center;
+    padding: 0 20px;
   }
 
   .cards {
@@ -42,8 +44,13 @@
       border-radius: 3px;
       max-width: 550px;
       padding: 20px;
-
       margin: 20px;
+
+      @include viewports(up-to small) {
+        max-width: 100%;
+        width: 100%;
+      }
+
 
       // Icon
       img {

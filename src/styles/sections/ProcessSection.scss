@@ -1,5 +1,5 @@
+@import "../modules/globals";
 @import "../Section";
-
 
 .process {
   display: flex;
@@ -10,7 +10,7 @@
   background-color: #000;
 
   .panel {
-    min-width: 225px;
+
     max-width: calc(25% - 60px);
     height: 100vh;
     display: flex;
@@ -21,6 +21,21 @@
     padding: 30px;
     position: relative;
     z-index: 2;
+
+    @include viewports(up-to small) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include viewports(medium) {
+      max-width:  calc(50% - 60px);
+      width: 50%;
+    }
+
+    @include viewports(large) {
+      flex-wrap: nowrap;
+
+    }
 
     &:after {
       content: '';

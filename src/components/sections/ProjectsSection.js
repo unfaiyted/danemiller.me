@@ -51,9 +51,6 @@ function bgStyle(bg) {
 
 
 class ProjectsSection extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillMount() {
     this.setState({
