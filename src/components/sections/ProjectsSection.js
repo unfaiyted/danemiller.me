@@ -104,7 +104,6 @@ class ProjectsSection extends Component {
               </div>
             </div>
 
-
         <div style={project.img} className='bgImg'/>
           <button onClick={this.prev}>Prev</button> <button onClick={this.next}>Next</button>
       </section>
