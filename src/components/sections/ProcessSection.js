@@ -50,7 +50,7 @@ function bgStyle(bg) {
   const style = {
     backgroundImage: `url("${bg}")`,
     backgroundSize: 'cover'
-  }
+  };
 
   return style;
 }

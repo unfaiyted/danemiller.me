@@ -2,6 +2,9 @@
 .laptop-container {
   position: relative;
   width: 100%;
+  height: 45%;
+  top:0;
+  left:0;
 
 
     .device {
@@ -14,23 +17,25 @@
       height: 100%;
       background-size: 100% 100%;
       background-repeat: no-repeat;
+      padding-top: 53px;
+      overflow: hidden;
 
     }
 
     .screen {
       position: relative;
-      padding: 7%;
-      margin-right: 5.97777%;
-      margin-bottom: 2.81%;
-      margin-left: 6%;
-
+      height: 83.1%;
+      margin-right: 117px;
+      margin-left: 13%;
+      overflow: hidden;
     }
 
-  img {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
+    .laptopBgImg {
+      overflow: hidden;
+      z-index: 3;
+      height: 100%;
+      width: 100%;
+    }
 
   }
 

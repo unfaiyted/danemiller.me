@@ -1,0 +1,73 @@
+
+
+.contact {
+  h3 {
+    font-size: 100px;
+    margin:0;
+    text-align: center;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom:10px;
+      left: calc(50% - 45px);
+      width: 100px;
+      border-bottom: 3px double #FE0000;
+
+    }
+
+  }
+
+  p {
+  text-align: center;
+    font-size: 24px;
+  }
+
+
+  form {
+    padding: 50px;
+    // Hide Labels
+    label {
+      visibility: hidden;
+      height: 0;
+      position: fixed;
+    }
+
+    input {
+      background: transparent;
+      font-size: 4vh;
+      border: 0;
+      border-top: 1px solid #9a9d96;
+      border-radius: 0;
+      outline: none;
+      -webkit-appearance: none;
+      width: 100%;
+      padding-top: 10px;
+      padding-left: 10px;
+    }
+
+    input:focus {
+      -webkit-appearance: none;
+      outline: none;
+    }
+
+    textarea:focus, input:focus{
+      outline: 0;
+    }
+
+    input:-webkit-autofill {
+      -webkit-animation-name: autofill;
+      -webkit-animation-fill-mode: both;
+    }
+
+    @-webkit-keyframes autofill {
+      to {
+        color: #666;
+        background: transparent;
+      }
+    }
+
+  }
+
+}

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-
+import '../styles/Footer.scss';
 
 class Footer extends Component {
   render() {
     return (
-      <footer>
+      <footer className='half-section footer'>
 
-        <div>
-          <img src="../images/logo.png" alt="Dane Miller" className="footer-logo" />
-        </div>
+
+        <p>Thank you</p>
 
           <div>
               <a href="mailto:miller.l.dane@gmail.com">miller.l.dane@gmail.com</a>

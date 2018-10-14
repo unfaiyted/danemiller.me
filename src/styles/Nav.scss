@@ -1,19 +1,25 @@
 @import "./modules/globals";
 
 .nav {
-  width: calc(100vw - 40px);
+  width: calc(100vw - 34px);
   position: absolute;
-  background: #1C1C1E;
+  height: 80px;
+  padding: 10px;
+  color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   top:0;
   left:0;
-
-  max-height: $navSize;
-  padding: 10px;
-
-  color: #fff;
+  transition: height 0.3s;
+  z-index: 20;
+  &.sticky {
+    background: #1C1C1E;
+    height: 50px;
+    position: fixed;
+    transition: all 0.3s;
+  }
 
   img {
     max-height: 50px;
@@ -26,27 +32,42 @@
 
   .title {
     font-size: 32px;
+    text-align: center;
     align-self: center;
-
+    position: absolute;
+    left:0;
+    right:0;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   ul {
       display: flex;
       flex-direction: row;
       list-style-type: none;
-      padding: 0 20px 0 0;
       margin:0;
     }
 
   li {
-    padding: 20px;
+    padding: 15px;
     position: relative;
     vertical-align: center;
+    margin-right: 10px;
+
+
+    &.active {
+      background-color: rgba(255, 52, 44, 0.25);
+      border: 3px solid red;
+      border-radius: 10px;
+      line-height: 17px;
+
+    }
 
      &:after {
        content: '';
        position: absolute;
-       bottom: 20px;
+       bottom: 14px;
        left: calc(50% - 17px);
        width:50%;
        border-bottom: 3px solid #FE0000;
@@ -61,19 +82,46 @@
       }
 
       &:last-child {
-        margin-top: 10px;
+        margin-top: 6px;
         border-radius: 30px;
-        font-size: 24px;
+        font-size: 20px;
         background-color: #FE0000;
-        width: 100px;
+        width: 120px;
         box-shadow: -1px -1px 44px -6px rgba(255,0,0,1);
         padding: 0;
         line-height: 45px;
         text-align: center;
         height: 45px;
+        text-transform: uppercase;
+
+        transform: scale(1.0);
+        transition: transform 0.5s;
+
+        &:hover {
+          animation: pulse 3s infinite;
+        }
+
 
       }
   }
 
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.0);
+    }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 
 }

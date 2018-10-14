@@ -93,14 +93,14 @@ class ProjectsSection extends Component {
   render() {
    const {project} = this.state;
     return (
-      <section id='project' className='section projects'>
+      <section id='work' className='section projects'>
 
             <div className="project">
-              <Laptop img={project.imgMini} alt={project.title} />
-              <div>
-                <h3>{project.title}</h3>
-                <p>{project.desc}</p>
-                <a href={project.github}>View on GitHub</a>
+                 <Laptop img={project.imgMini} alt={project.title} />
+               <div className='info'>
+                  <h3>{project.title}</h3>
+                  <p>{project.desc}</p>
+                  <a href={project.github}>View on GitHub</a>
               </div>
             </div>
 

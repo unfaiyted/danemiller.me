@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import InnovativeSection from "./components/sections/InnovativeSection";
 import ProcessSection from "./components/sections/ProcessSection";
 import ProjectsSection from "./components/sections/ProjectsSection";
+import ContactSection from "./components/sections/ContactSection";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <InnovativeSection/>
         <ProcessSection/>
         <ProjectsSection/>
+        <ContactSection/>
         <Footer/>
       </div>
     );
