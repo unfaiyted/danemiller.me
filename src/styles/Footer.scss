@@ -59,6 +59,10 @@
   .farm {
     @include viewports(up-to medium) {
       padding-bottom: 40px;
+
+      @include viewports(tiny) {
+       text-align: center;
+      }
     }
   }
 
@@ -89,7 +93,9 @@
       font-size: 22px;
       font-weight: lighter;
 
-
+      @include viewports(tiny) {
+        font-size: 18px;
+      }
 
     }
 

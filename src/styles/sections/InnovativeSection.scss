@@ -51,15 +51,24 @@
         width: 100%;
       }
 
+      div {
+          // Icon
+          img {
+            vertical-align: middle;
 
-      // Icon
-      img {
-        vertical-align: middle;
-      }
+            @include viewports(tiny) {
+              width: 90px;
+            }
 
-      // Title
-      span {
-        font-weight: bold;
+          }
+
+          // Title
+          span {
+            font-weight: bold;
+            font-size: 22px;
+            white-space: nowrap;
+          }
+
       }
 
       // Desc

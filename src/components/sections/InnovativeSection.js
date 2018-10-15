@@ -52,8 +52,10 @@ class InnovativeSection extends Component {
 
             {content.map((card) => (
               <div className="card">
+                <div>
                 <img src={card.icon} alt={card.title}/>
                 <span>{card.title}</span>
+                </div>
                 <p>{card.desc}</p>
               </div>
             ))}
