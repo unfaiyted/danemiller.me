@@ -80,6 +80,14 @@
 
    .info{
       width: 75%;
+
+     @include viewports(up-to small) {
+       margin-top: 60px;
+     }
+
+     @include viewports(medium) {
+       margin-top: 28px;
+     }
    }
 
    a {

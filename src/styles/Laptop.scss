@@ -12,6 +12,10 @@
     height: 37%;
   }
 
+  @include viewports(up-to tiny) {
+    height: 25%;
+  }
+
     .device {
       background: url("../images/macbook.png");
       top: 0;
@@ -19,15 +23,23 @@
       left: 0;
       right: 0;
       width: 100%;
+      max-width: 710px;
+      margin: auto;
       height: 100%;
       background-size: 100% 100%;
       background-repeat: no-repeat;
       padding-top: 53px;
       overflow: hidden;
 
+      @include viewports(tiny) {
+        padding-top: 25px;
+        max-width: 323px
+      }
 
-      @include viewports(up-to small) {
+      @include viewports(small) {
         padding-top: 43px;
+        max-width: 569px;
+
       }
 
     }
