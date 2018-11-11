@@ -24,7 +24,6 @@
     font-size: 24px;
   }
 
-
   form {
     padding: 50px;
     // Hide Labels
@@ -66,6 +65,18 @@
         color: #666;
         background: transparent;
       }
+    }
+
+
+    button {
+      margin: 0 auto;
+      display: block;
+      padding: 20px 30px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      background: #980B07;
+      color: #fff;
+
     }
 
   }
