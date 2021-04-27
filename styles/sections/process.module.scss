@@ -1,0 +1,82 @@
+@import "../modules/globals";
+@import "../Section";
+
+.process {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #fff;
+  font-size: 25px;
+  background-color: #000;
+
+  .panel {
+
+    max-width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+
+    @include viewports(up-to small) {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include viewports(medium) {
+      max-width:  50%;
+      width: 50%;
+    }
+
+    @include viewports(large) {
+      flex-wrap: nowrap;
+
+    }
+
+    &:after {
+      content: '';
+      background-color: red;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top:0;
+      left:0;
+      transform: scaleY(0);
+      z-index: -1;
+      transition: transform 0.2s;
+    }
+
+    &:hover:after {
+      transform: scaleY(1);
+      transition: transform 0.33s;
+    }
+
+
+    .bg {
+      filter: grayscale(30%) opacity(0.9) brightness(.6);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    span {
+     font-size: 32px;
+
+    }
+    img {
+      width: 170px;
+      height: 170px;
+      filter: brightness(10000%);
+      pointer-events: none;
+    }
+
+  }
+
+}
+
