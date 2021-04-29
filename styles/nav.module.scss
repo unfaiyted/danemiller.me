@@ -41,7 +41,7 @@
   }
 
   .title {
-    font-size: 32px;
+    font-size: calc(32px + 1vh);
     text-align: center;
     align-self: center;
     position: absolute;
@@ -64,6 +64,7 @@
     position: relative;
     vertical-align: center;
     margin-right: 10px;
+    font-size: calc(10px + 1vh);
 
     @include viewports(up-to medium) {
       display: none;
@@ -98,9 +99,9 @@
       &:last-child {
         margin-top: 6px;
         border-radius: 30px;
-        font-size: 20px;
+        font-size: calc(12px + 1vh);
         background-color: #FE0000;
-        width: 120px;
+        width: calc(120px + 1vw);
         box-shadow: -1px -1px 44px -6px rgba(255,0,0,1);
         padding: 0;
         line-height: 45px;

@@ -30,7 +30,7 @@ const content = [{
     title: "Customer Oriented",
     desc: `Understanding the needs of the customer and with the ability to anticipate what
            they are asking and how that related to what is technically possible to both create
-           and implement the needs.`,
+           and implement their needs.`,
     icon: iconPerson,
   }
 ];
@@ -59,9 +59,7 @@ class InnovativeSection extends Component {
               </div>
             ))}
 
-
          </div>
-
 
       </section>
     );
