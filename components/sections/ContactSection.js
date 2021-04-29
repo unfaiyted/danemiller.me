@@ -20,7 +20,7 @@ const contactSection = () => {
     return (
       <section id='contact' className={[styles.halfSection, styles.contact].join(" ")} >
             <h3>Contact Me</h3>
-              <p>Please let me know if you have a project you'd be interested in getting my assistance on!</p>
+              <p>Please fill in your contact info below and I'll be in contact with you soon.</p>
           <form id="contact-form" >
 
             <div className={styles.formContainer}>
@@ -29,8 +29,6 @@ const contactSection = () => {
               <Item id="contact-phone" label="Phone" placeholder="Phone Number"/>
               <Item id="contact-message" label="Message"  />
             </div>
-
-
 
 
             <button type="submit" id="contactSubmit">Submit</button>

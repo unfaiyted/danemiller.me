@@ -4,6 +4,7 @@
   h3 {
     font-size: 100px;
     margin:0;
+    margin-top: 30px;
     text-align: center;
     position: relative;
 
@@ -20,8 +21,8 @@
   }
 
   p {
-  text-align: center;
-    font-size: 24px;
+    text-align: center;
+    font-size: 30px;
   }
 
   form {
@@ -31,7 +32,8 @@
     label {
       position: absolute;
       padding-left: 20px;
-      padding-top: 5px;
+      padding-top: 15px;
+      font-size: 20px;
 
 
     }
@@ -43,10 +45,11 @@
       border-radius: 0;
       outline: none;
       -webkit-appearance: none;
-      width: 100%;
-      padding-top: 20px;
+      width: calc(100% - 20px);
+      padding-top: 30px;
       padding-left: 10px;
-      margin: 5px;
+      margin: 10px;
+
 
     }
 
@@ -80,6 +83,8 @@
       border-radius: 2px;
       background: #980B07;
       color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+      cursor: pointer;
 
     }
 
@@ -89,11 +94,13 @@
 
     max-width: 650px;
     position: relative;
-
-
-    border: 1px solid #ffffff;
+    border-bottom: 1px solid #d2cfcf;
+    //border: 1px solid #ffffff;
     background-color: transparent;
+  }
 
+  .formItem:last-of-type {
+    border:none;
   }
 
 
@@ -105,6 +112,8 @@
     background-color: #fff;
     border: 3px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    margin-bottom: 20px;
+
   }
 
 
