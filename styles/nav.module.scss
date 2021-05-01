@@ -1,0 +1,147 @@
+@import "./modules/globals";
+
+
+.nav {
+  width: 100%;
+  max-width: $maxPageWidth;
+
+  position: absolute;
+  height: 80px;
+  padding: 50px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  top:0;
+  transition: background-color 0.5s;
+  z-index: 20;
+
+  @include viewports(up-to small) {
+    width: calc(100vw - 20px);
+  }
+
+  &.sticky {
+    background: #1C1C1E;
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: all 0.5s;
+  }
+
+  img {
+    max-height: 50px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .title {
+    font-size: calc(32px + 1vh);
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    left:0;
+    right:0;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ul {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      margin:0;
+    }
+
+  li {
+    padding: 15px;
+    position: relative;
+    vertical-align: center;
+    margin-right: 10px;
+    font-size: calc(10px + 1vh);
+
+    @include viewports(up-to medium) {
+      display: none;
+    }
+
+
+    &.active {
+      background-color: rgba(255, 52, 44, 0.25);
+      border: 3px solid red;
+      border-radius: 10px;
+      line-height: 17px;
+
+    }
+
+     &:after {
+       content: '';
+       position: absolute;
+       bottom: 14px;
+       left: calc(50% - 17px);
+       width:50%;
+       border-bottom: 3px solid #FE0000;
+       transform: scaleX(0);
+       transition: transform 0.33s;
+     }
+
+      &:not(:last-child):hover:after {
+        width: 50%;
+        transform: scaleX(1);
+        transition: transform 0.33s;
+      }
+
+      &:last-child {
+        margin-top: 6px;
+        border-radius: 30px;
+        font-size: calc(12px + 1vh);
+        background-color: #FE0000;
+        width: calc(120px + 1vw);
+        box-shadow: -1px -1px 44px -6px rgba(255,0,0,1);
+        padding: 0;
+        line-height: 45px;
+        text-align: center;
+        height: 45px;
+        text-transform: uppercase;
+
+        transform: scale(1.0);
+        transition: transform 0.5s;
+
+
+        @include viewports(medium) {
+          display: inline-block;
+        }
+
+        &:hover {
+          animation: pulse 3s infinite;
+        }
+
+
+      }
+  }
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.0);
+    }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+
+}

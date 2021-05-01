@@ -1,0 +1,16 @@
+@import "./modules/globals";
+
+.section {
+  min-height: calc(100vh - 100px);
+  max-width: $maxPageWidth;
+  overflow: hidden;
+  background: url("/images/bg-paper.png")
+}
+
+.halfSection {
+  min-height: 50vh;
+  max-width: $maxPageWidth;
+  overflow: hidden;
+  background: url("/images/bg-paper.png");
+
+}

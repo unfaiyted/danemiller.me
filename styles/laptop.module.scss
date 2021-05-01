@@ -1,0 +1,67 @@
+@import "./modules/globals";
+
+.laptopContainer {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  top:0;
+  left:0;
+
+  @include viewports(up-to small) {
+    width: 90%;
+    height: 37%;
+  }
+
+  @include viewports(up-to tiny) {
+    height: 25%;
+  }
+
+}
+
+.device {
+  background: url("../public/images/macbook.png");
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 710px;
+  margin: auto;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 53px;
+  overflow: hidden;
+
+  @include viewports(tiny) {
+    padding-top: 25px;
+    max-width: 323px
+  }
+
+  @include viewports(small) {
+    padding-top: 43px;
+    max-width: 569px;
+
+  }
+
+}
+
+.screen {
+  position: relative;
+  height: 83.1%;
+  margin-right: 13.7%;
+  margin-left: 13%;
+  overflow: hidden;
+}
+
+.laptopBgImg {
+  overflow: hidden;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+
