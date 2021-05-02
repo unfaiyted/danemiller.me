@@ -20,7 +20,7 @@
   z-index: 20;
 
   @include viewports(up-to small) {
-    width: calc(100vw - 20px);
+    width: 100vw;
   }
 
   &.sticky {

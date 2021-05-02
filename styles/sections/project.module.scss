@@ -66,6 +66,8 @@
 
      @include viewports(up-to small) {
        font-size: 24px;
+       margin-left: 14px;
+       margin-right: 5px;
      }
 
      &:after {

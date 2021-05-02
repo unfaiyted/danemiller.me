@@ -12,10 +12,23 @@
   justify-content: space-between;
 
   @include viewports(up-to medium) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 15px;
   }
+
+
+  .websiteIcons {
+    @include viewports(up-to medium) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+
 
   div {
 
@@ -23,17 +36,26 @@
       min-width: 33%;
     }
 
+
+
+
   }
 
   p{
     font-size: 1.4em;
     margin-top:0;
+
+
   }
 
   h3 {
     font-size: 56px;
     margin:0;
     font-style: italic;
+
+    @include viewports(up-to medium) {
+     display: none;
+    }
   }
 
   a {
@@ -70,7 +92,17 @@
        text-align: center;
       }
     }
+
+    .list {
+      margin-top: 30px;
+    }
+
+
   }
+
+
+
+
 
 
   .personal {

@@ -35,7 +35,7 @@ class Footer extends Component {
 
         <div className={styles.farm}>
           <h3>Dane L Miller</h3>
-          <ul className={styles.right}>
+          <ul className={styles.list}>
             {sections.map((item) => (
               <li key={item}>
                 <a href={`#${item}`} >{capFirst(item)}</a>
@@ -64,7 +64,7 @@ class Footer extends Component {
             <span className={styles.muted}>If you'd like to see more projects I have been involved with or find out more
             check out these websites</span>
 
-            <div>
+            <div className={styles.websiteIcons}>
                 <a href="http://github.com/unfaiyted">
                   <img src="/images/github-brands.svg" alt="icon"/>
 
