@@ -6,7 +6,7 @@ import Footer from './footer'
 import Nav from "./nav";
 import React from "react";
 
-export const siteTitle = 'DaneMiller.dev'
+export const siteTitle = 'Dane Miller.dev'
 
 export default function Layout ({ children, home }) {
   return (

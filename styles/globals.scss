@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Teko');
-@import url('https://fonts.googleapis.com/css?family=Gruppo|Lato|Righteous|Monoton');
+
+
+
+@font-face {
+  font-family: 'Teko';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Teko'), url(https://fonts.googleapis.com/css?family=Teko) format('woff2');
+  font-display: swap;
+}
 
 
 a {
